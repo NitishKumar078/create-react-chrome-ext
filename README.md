@@ -4,20 +4,21 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/create-react-chrome-ext.svg)](https://www.npmjs.com/package/create-react-chrome-ext)
 
-> The fastest way to create a Chrome Extension project with React 19, TypeScript/JavaScript, and Webpack
+> The fastest way to create a Chrome Extension project with React 19, TypeScript/JavaScript, Tailwind CSS, and Webpack
 
-A CLI tool that scaffolds a modern Chrome Extension project using React 19 and Webpack, similar to how `create-react-app` works. Get up and running with a fully configured Chrome Extension development environment in seconds.
+A CLI tool that scaffolds a modern Chrome Extension project using React 19 and Webpack, similar to how `create-react-app` works. Get up and running with a fully configured Chrome Extension development environment in seconds. Choose from **four templates** — JavaScript, TypeScript, JavaScript + Tailwind CSS, or TypeScript + Tailwind CSS.
 
 ## ✨ Features
 
 - 🚀 **Lightning Fast**: Powered by Webpack for optimized development builds
 - ⚛️ **React 19 Ready**: Pre-configured with the latest React 19 and modern JSX transform
 - 📝 **TypeScript Support**: Choose between JavaScript or TypeScript templates
+- 🎨 **Tailwind CSS Support**: Optional Tailwind CSS v3 integration — available for **both JS and TS** templates
 - 🔧 **Manifest V3**: Built with the latest Chrome Extension Manifest V3 specification
 - 🔄 **Auto Reload**: Development server with automatic extension reloading
 - 📦 **Production Ready**: Optimized Webpack build process for publishing
 - 🎯 **Complete Structure**: Includes background script, content script, and popup components
-- 🎨 **Interactive Setup**: Guided CLI prompts for project configuration
+- 🖱️ **Interactive Setup**: Guided CLI prompts for project configuration
 
 ## 🚀 Quick Start
 
@@ -56,13 +57,25 @@ npx create-react-chrome-ext
 
 🚀 Create Chrome Extension with React
 √ Project name: ... my-awesome-extension
-√ Choose language: » JavaScript
+√ Choose a template: » JavaScript
+                       TypeScript
+                       JavaScript + Tailwind CSS
+                       TypeScript + Tailwind CSS
 ✅ Project created successfully!
 👉 Next steps:
   cd my-awesome-extension
   npm install
   npm run dev
 ```
+
+### 📐 Available Templates
+
+| Template | Language | Tailwind CSS |
+|---|---|---|
+| `js` | JavaScript | ❌ |
+| `ts` | TypeScript | ❌ |
+| `js-tailwind` | JavaScript | ✅ |
+| `ts-tailwind` | TypeScript | ✅ |
 
 ## 📋 Available Scripts
 
@@ -155,7 +168,8 @@ npm install <package-name>
 
 ### Styling
 - Use CSS modules, styled-components, or any CSS framework
-- Tailwind CSS can be easily integrated
+- **Tailwind CSS** is available as a built-in template option for both **JavaScript** and **TypeScript** — no manual setup required!
+- To use Tailwind from the start, select the **"JavaScript + Tailwind CSS"** or **"TypeScript + Tailwind CSS"** template during setup
 - CSS files are automatically processed by Webpack
 
 ## 🤝 Contributing
