@@ -28,6 +28,15 @@ async function main() {
         { title: "TypeScript", value: "ts" },
       ],
     },
+    {
+      type: "select",
+      name: "tailwind",
+      message: "Do you want to use Tailwind CSS?",
+      choices: [
+        { title: "Yes", value: true },
+        { title: "No", value: false },
+      ],
+    },
   ]);
 
   const projectDir = join(process.cwd(), response.projectName);
@@ -40,7 +49,8 @@ async function main() {
   fs.mkdirSync(projectDir);
 
   // Copy template
-  const templatePath = join(__dirname, `../templates/${response.language}`);
+  const templateName = response.tailwind ? `${response.language}-tailwind` : response.language;
+  const templatePath = join(__dirname, `../templates/${templateName}`);
   fs.cpSync(templatePath, projectDir, { recursive: true });
 
   console.log(chalk.green("\n✅ Project created successfully!"));

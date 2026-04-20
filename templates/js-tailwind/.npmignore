@@ -1,0 +1,31 @@
+# Ignore dependencies
+node_modules
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Build outputs
+dist
+coverage
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode
+.idea
+
+# Test files
+*.test.js
+*.test.ts
+__tests__/
+
+# Template-specific build artifacts
+templates/**/node_modules
+templates/**/dist
+
+# Git & misc
+.git
+.gitignore
+.npmignore
